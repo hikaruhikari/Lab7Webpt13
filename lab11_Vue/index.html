@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>SPA Frontend Vuejs - Praktikum 12</title> 
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        nav {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eff1ff;
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #5778ff;
+            font-weight: bold;
+            padding: 8px 16px;
+            transition: 0.3s;
+        }
+        /* Style otomatis dari Vue Router saat menu aktif/diklik */
+        .router-link-exact-active {
+            background-color: #5778ff;
+            color: #ffffff !important;
+            border-radius: 4px;
+        }
+    </style>
+</head> 
+<body> 
+    <div id="app"> 
+        <nav>
+            <router-link to="/">Beranda</router-link>
+            <router-link to="/artikel">Kelola Artikel</router-link>
+            <router-link to="/about">About</router-link>
+        </nav>
+
+        <router-view></router-view>
+    </div> 
+    
+    <script src="assets/js/components/Home.js"></script>
+    <script src="assets/js/components/About.js"></script>
+    <script src="assets/js/components/Artikel.js"></script>
+    <script src="assets/js/apps.js"></script> 
+</body> 
+</html>
